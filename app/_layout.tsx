@@ -1,5 +1,4 @@
 import React from 'react';
-import { NavigationContainer } from '@react-navigation/native';
 import { ActivityIndicator, View, StyleSheet } from 'react-native';
 import AuthNavigator from '../src/navigation/AuthStack';
 import MainStack from '../src/navigation/MainStack';
@@ -16,11 +15,7 @@ const RootNavigator = () => {
     );
   }
 
-  return (
-    <NavigationContainer independent={true}>
-      {user ? <MainStack /> : <AuthNavigator />}
-    </NavigationContainer>
-  );
+  return user ? <MainStack /> : <AuthNavigator />;
 };
 
 const AppLayout = () => {
