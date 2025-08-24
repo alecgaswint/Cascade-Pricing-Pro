@@ -13,7 +13,12 @@ const AdminScreen = () => {
         <List.Item
           title="Manage Materials"
           left={() => <List.Icon icon="hammer-wrench" />}
-          onPress={() => navigation.navigate('Materials')}
+          onPress={() => navigation.navigate('MaterialManager')}
+        />
+        <List.Item
+          title="Manage Services"
+          left={() => <List.Icon icon="briefcase-wrench" />}
+          onPress={() => navigation.navigate('ServiceManager')}
         />
       </List.Section>
     </View>

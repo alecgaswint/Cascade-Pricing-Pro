@@ -1,7 +1,8 @@
 import React from 'react';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import MainTabs from './MainTabs';
-import MaterialsScreen from '../screens/Main/MaterialsScreen';
+import MaterialManager from '../screens/Admin/MaterialManager';
+import ServiceManager from '../screens/Admin/ServiceManager';
 
 const Stack = createNativeStackNavigator();
 
@@ -14,9 +15,14 @@ const MainStack = () => {
         options={{ headerShown: false }}
       />
       <Stack.Screen
-        name="Materials"
-        component={MaterialsScreen}
+        name="MaterialManager"
+        component={MaterialManager}
         options={{ title: 'Manage Materials' }}
+      />
+      <Stack.Screen
+        name="ServiceManager"
+        component={ServiceManager}
+        options={{ title: 'Manage Services' }}
       />
     </Stack.Navigator>
   );
